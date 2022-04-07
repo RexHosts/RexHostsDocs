@@ -64,8 +64,8 @@
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto active" href="#github-repo"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Method 1: GitHub Bot</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#ordering-service">Ordering Your Service</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#configuring-service">Configuring Your Service</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto active" href="#github-repo"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Method 2: Uploading Bot</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#create-your-account">Placing Your Order</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto active" href="#upload-method"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Method 2: Uploading Bot</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#configuration-upload-service">Configuration</a></li>
 			    </ul>
 
 		    </nav><!--//docs-nav-->
@@ -102,7 +102,7 @@
 
 			    <article class="docs-article" id="github-repo">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Method 1: GitHub Repository Bot <span class="docs-time">Last updated: April 4th, 2022</span></h1>
+					    <h1 class="docs-heading">Method 1: GitHub Repository Bot</h1>
 					    <section class="docs-intro">
 						    <p>This method is the preferred way of getting your bot deployed on your ordered server. You can set it so that everytime the bot comes online, it will pull the latests updates from the GitHub repository.</p>
 						</section><!--//docs-intro-->
@@ -221,6 +221,63 @@
                                     </ul>
                                 </ul>
                                 That's it for the configuration part of the bot setup. You can make changes to things such as file names, configuration files, etc in the file manager of the RexHosts Console. You can also change the config variables that were mentioned above, such as disabling auto update, repo name, repo keys, etc.
+                            </p>
+					</section><!--//section-->
+					
+					
+			    </article><!--//docs-article-->
+
+			    <article class="docs-article" id="upload-method">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Method 2: Uploading Bot Manually</h1>
+					    <section class="docs-intro">
+						    <p>This method is the less used way of getting your bot deployed on your ordered server. You can manage your bot within the file manager in the RexHosts console.</p>
+						</section><!--//docs-intro-->
+						
+				    </header>
+				    <section class="docs-section" id="configuration-upload-service">
+						<h2 class="section-heading">Configuring Your Service</h2>
+						    <p>This section will cover on which field you need to focus on when your want to upload your bot instead of using a GitHub repo.</p>
+                            <p><b>Fields</b></p>
+                            <p>There are a total of 7 fields on the configuration page. They look like this...</p>
+                            <img src="img/discordjs-fields.png" class="img-fluid" alt="">
+                            <p>However, when your uploading your bot instead of using a GitHub repository, you only need to edit the "Upload or GitHub" field. You must set it to "Uploading Manually"
+                                <ul>
+                                    <li><img src="img/djs-upload.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>       
+                            </p>
+                            <p>Another required field is the bot start file. You need to make sure that you set the bot start file name in that field. Even though you're manually uploading the bot, this field should still be set for when you've uploaded your bot and restart the server - it will look out for the file name you've entered in this field.
+                                <ul>
+                                    <li><img src="img/djs-start.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p>That's it, you can place your order and wait for the server to be setup. Once setup, you will get an email containing the information you need to access the RexHosts Console. Once you get it and log in, you will be presented with a list of your active services, your bot server will be there. Click on it to access the server GUI.
+                                <ul>
+                                    <li><img src="img/um-console.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                    <li><img src="img/um-cmd.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p>At the top, you will see a tab called "File Manager", click on it.
+                                <ul>
+                                    <li><img src="img/um-tabs.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p>You will be presented with all the files in your bot server. It should be pretty much bare since you've chosen the upload method. You can upload the bot files (in a ZIP file) by clicking the "Upload" button.
+                                <ul>
+                                    <li><img src="img/um-upload.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p>Once the file has been uploaded, you can right click on it and click on "unarchive", this will extract all the files in the zip folder. You may get a unarchived folder after unarchiving, make sure to move those contents to the main directory!
+                                <ul>
+                                    <li><img src="img/um-zip.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p><b>Edit any neccessary files and restart the server. Your bot should successfully come online.</b></p>
+                            <h4>Alternatively</h4>
+                            <p>You can use FTP to upload your bot to the server. You can find the FTP information in the "Settings" tab.
+                                <ul>
+                                    <li><img src="img/um-ftp.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
                             </p>
 					</section><!--//section-->
 					
