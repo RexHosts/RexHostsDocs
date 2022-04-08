@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>RexHosts Docs | How To Setup A Discord.PY Generic Bot</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="../assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="../assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme.css?v=5">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="../index"><span class="logo-text">RexHosts<span class="text-alt">Docs</span></span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                    <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+                        <a href="index" class="btn btn-primary d-none d-lg-flex">Go Back</a>
+                    </div><!--//docs-top-utilities-->
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Discord.PY Generic Bots</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#prerequisites">Prerequisites</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto active" href="#github-repo"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Method 1: GitHub Bot</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#ordering-service">Ordering Your Service</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#configuring-service">Configuring Your Service</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto active" href="#upload-method"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Method 2: Uploading Bot</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#configuration-upload-service">Configuration</a></li>
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Discord.PY Bots <span class="docs-time">Last updated: April 4th, 2022</span></h1>
+					    <section class="docs-intro">
+						    <p>discord.py is a modern, easy to use, feature-rich, and async ready API wrapper for Discord. <i><a href="https://discordpy.readthedocs.io/en/stable/">See https://discordpy.readthedocs.io.</a></i></p>
+                            <small></small>
+                            <p>RexHosts offers generic discord.py bot hosting. By generic, we mean you can host almost any bot that is built discord.py. Whether you want to pull a bot from a GitHub repository or upload your own bot, we can help make it happen. This documentation will go through 2 different methods of hosting a discord.js bot.</p>
+                            <p>Please be aware that this documentation doesn't provide support for discord.py programming. This documentation is going to assume you have a bot already!</p>
+						</section><!--//docs-intro-->
+						
+				    </header>
+				    <section class="docs-section" id="prerequisites">
+						<h2 class="section-heading">Prerequisites</h2>
+						<p>
+                            <ul>
+                                <li>A bot picked out (or developed).</li>
+                                <ul>
+                                    <li>You can find lots of open source discord.py bots on GitHub. <a href="https://github.com/search?q=discord+py+bot" target="_blank">Click here to see them!</a></li>
+                                    <li>Alternatively, you can have your bot on a local machine ready to be uploaded.</li>
+                                </ul>
+                                <li>(Optional) Discord.PY hosting from RexHosts. The steps in this documentation will walk you through the setup steps when ordering.</li>
+                            </ul>
+                        </p>
+					</section><!--//section-->
+					
+					
+			    </article><!--//docs-article-->
+
+			    <article class="docs-article" id="github-repo">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Method 1: GitHub Repository Bot</h1>
+					    <section class="docs-intro">
+						    <p>This method is the preferred way of getting your bot deployed on your ordered server. You can set it so that everytime the bot comes online, it will pull the latests updates from the GitHub repository.</p>
+						</section><!--//docs-intro-->
+						
+				    </header>
+				    <section class="docs-section" id="ordering-service">
+						<h2 class="section-heading">Ordering Your Service</h2>
+						    <p>As mentioned above, ensure that you have your bot picked out on GitHub prior to ordering!</p>
+                            <p><b>Step 1</b></p>
+                            <p>Head over to <a href="https://rexhosts.com">https://rexhosts.com</a> and sign in to your account. If you do not have an account, you <a href="../account-docs/how-to-create-an-account.html">check this doc</a> on how to create an account.</p>
+                            <p><b>Step 2</b></p>
+                            <p>Click the "Bots" tab in the navigation panel, it will show a dropdown - select Discord.PY Bots. It will bring you to the order page for the discord.py service. Click order on the package you wish to order!</p>
+                            <p><b>Step 3</b></p>
+                            <p>You will be brought to the service configuration page which we will walk you through next.</p>
+					</section><!--//section-->
+				    <section class="docs-section" id="configuring-service">
+						<h2 class="section-heading">Configuring Your Service</h2>
+						    <p>This section will cover on which field means when you arrive at the order configuration page.</p>
+                            <p><b>Fields</b></p>
+                            <p>There are a total of 7 fields on the configuration page. They look like this...</p>
+                            <img src="img/discordjs-fields.png" class="img-fluid" alt="">
+                            <p>
+                                <ul>
+                                    <li><b>Upload or GitHub</b></li>
+                                    <ul>
+                                        <li>This field is asking if you want to upload your bot files to the server when it is installed, or if you want to use a GitHub repository. In this section, we're going to use a GitHub repository.</li>
+                                        <ul>
+                                            <li><img src="img/discordjs-usinggithub.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                        </ul>   
+                                    </ul>
+                                    <li><b>GitHub Address</b></li>
+                                    <ul>
+                                        <li>This field is asking you for the GitHub repository address. The GitHub repo address can be found when you're inside a repositories main page (where main file structure is shown).</li>
+                                        <ul>
+                                            <li><img src="img/discordjs-repoaddress.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                            <li>Copy the address and head back to the order configuration page and enter it into the GitHub Address field.</li>
+                                            <li><img src="img/djs-repoinput.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                        </ul>   
+                                    </ul>
+                                    <li><b>GitHub Username</b></li>
+                                    <ul>
+                                        <li>This field is asking you for your GitHub username. This is required if your the owner of the repository <b>AND</b> the repository is set to private.</li>
+                                        <ul>
+                                            <li><img src="img/djs-username.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                            <ul>
+                                                <li>This isn't required if it's a public repository, if thats the case, you can leave this blank!</li>
+                                            </ul>
+                                        </ul>   
+                                    </ul>
+                                    <li><b>GitHub Access Token</b></li>
+                                    <ul>
+                                        <li>This field is asking you for an access token. An access token acts as a password in which you can use for services such as Discord.PY to access your private repositories without having to use your accounts password. You can find out more about access tokens <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" target="_blank">here</a>. You can skip this step if your repository is accessible by the public.</li>
+                                        <ul>
+                                            <li>To create an access token, you must do the following (information grabbed from GitHub docs)</li>
+                                            <ol>
+                                                <li>Verify your email address, if it hasn't been verified yet.</li>
+                                                <li>In the upper-right corner of any page, click your profile photo, then click Settings.</li>
+                                                <ul>
+                                                    <li><img src="https://docs.github.com/assets/cb-34573/images/help/settings/userbar-account-settings.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                                </ul>
+                                                <li>In the left sidebar, click Developer settings.</li>
+                                                <li>In the left sidebar, click Personal access tokens.</li>
+                                                <ul>
+                                                    <li><img src="https://docs.github.com/assets/cb-7169/images/help/settings/personal_access_tokens_tab.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                                </ul>
+                                                <li>Click Generate new token.</li>
+                                                <ul>
+                                                    <li><img src="https://docs.github.com/assets/cb-6922/images/help/settings/generate_new_token.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                                </ul>
+                                                <li>Give your token a descriptive name.</li>
+                                                <ul>
+                                                    <li><img src="https://docs.github.com/assets/cb-3880/images/help/settings/token_description.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                                </ul>
+                                                <li>To give your token an expiration, select the Expiration drop-down menu, then click a default or use the calendar picker. This is optional!</li>
+                                                <ul>
+                                                    <li><img src="https://docs.github.com/assets/cb-39847/images/help/settings/token_expiration.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                                </ul>
+                                                <li>Select the scopes, or permissions, you'd like to grant this token. To use your token to access repositories from the command line, select repo. <b>In this case, all we need to do is select the "repo" box and thats it.</b></li>
+                                                <ul>
+                                                    <li><img src="https://docs.github.com/assets/cb-43299/images/help/settings/token_scopes.gif" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                                </ul>
+                                                <li>Click Generate token.</li>
+                                                <ul>
+                                                    <li><img src="https://docs.github.com/assets/cb-10912/images/help/settings/generate_token.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><img src="https://docs.github.com/assets/cb-33474/images/help/settings/personal_access_tokens.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                                </ul>
+                                                <li>You can then take that token, go back to the configuration page on RexHosts and enter the personal access token that was generated, into the GitHub Access Token field!</li>
+                                            </ol>
+                                        </ul>   
+                                        
+                                    <div class="alert alert-danger"><b>Warning</b>: Treat your tokens like passwords and keep them secret. When working with the API, use tokens as environment variables instead of hardcoding them into your programs.</div>
+                                    </ul>
+                                    <li><b>Install Branch</b></li>
+                                    <ul>
+                                        <li>This field is asking you for the branch name you want to pull from. If left blank (recommended), it will pull from the main branch. If you know the identifier to the branch you would like to use, simply copy the branch name and paste it into the Install Branch field.</li>
+                                        <ul>
+                                            <li><img src="img/djs-installbranch.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                        </ul>   
+                                    </ul>
+                                    <li><b>Auto Update</b></li>
+                                    <ul>
+                                        <li>This field asks if you want to auto update your bot on every start. This only works if your using this GitHub repository method. Everytime you restart your bot through the console, it will check for changes in the GitHub repo and apply updates if there are any.</li>
+                                        <ul>
+                                            <li><img src="img/djs-update.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                        </ul>   
+                                    </ul>
+                                    <li><b>Start Bot File</b></li>
+                                    <ul>
+                                        <li>This field asks for the file name of the bot start. This is is a <b>must</b> in order for the bot to start. Usually the bot start files are labelled index.py or bot.py.</li>
+                                        <ul>
+                                            <li><img src="img/botpy.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                            <li><i>NOTE: This field is case sensitive and should match your bot start file name <b>exactly</b>. Any mistakes may result in the bot not starting!</i></li>
+                                        </ul>   
+                                    </ul>
+                                </ul>
+                                That's it for the configuration part of the bot setup. You can make changes to things such as file names, configuration files, etc in the file manager of the RexHosts Console. You can also change the config variables that were mentioned above, such as disabling auto update, repo name, repo keys, etc.
+                            </p>
+					</section><!--//section-->
+					
+					
+			    </article><!--//docs-article-->
+
+			    <article class="docs-article" id="upload-method">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Method 2: Uploading Bot Manually</h1>
+					    <section class="docs-intro">
+						    <p>This method is the less used way of getting your bot deployed on your ordered server. You can manage your bot within the file manager in the RexHosts console.</p>
+						</section><!--//docs-intro-->
+						
+				    </header>
+				    <section class="docs-section" id="configuration-upload-service">
+						<h2 class="section-heading">Configuring Your Service</h2>
+						    <p>This section will cover on which field you need to focus on when your want to upload your bot instead of using a GitHub repo.</p>
+                            <p><b>Fields</b></p>
+                            <p>There are a total of 7 fields on the configuration page. They look like this...</p>
+                            <img src="img/discordjs-fields.png" class="img-fluid" alt="">
+                            <p>However, when your uploading your bot instead of using a GitHub repository, you only need to edit the "Upload or GitHub" field. You must set it to "Uploading Manually"
+                                <ul>
+                                    <li><img src="img/djs-upload.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>       
+                            </p>
+                            <p>Another required field is the bot start file. You need to make sure that you set the bot start file name in that field. Even though you're manually uploading the bot, this field should still be set for when you've uploaded your bot and restart the server - it will look out for the file name you've entered in this field.
+                                <ul>
+                                    <li><img src="img/botpy.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p>That's it, you can place your order and wait for the server to be setup. Once setup, you will get an email containing the information you need to access the RexHosts Console. Once you get it and log in, you will be presented with a list of your active services, your bot server will be there. Click on it to access the server GUI.
+                                <ul>
+                                    <li><img src="img/um-console.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                    <li><img src="img/um-cmd.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p>At the top, you will see a tab called "File Manager", click on it.
+                                <ul>
+                                    <li><img src="img/um-tabs.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p>You will be presented with all the files in your bot server. It should be pretty much bare since you've chosen the upload method. You can upload the bot files (in a ZIP file) by clicking the "Upload" button.
+                                <ul>
+                                    <li><img src="img/um-upload.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p>Once the file has been uploaded, you can right click on it and click on "unarchive", this will extract all the files in the zip folder. You may get a unarchived folder after unarchiving, make sure to move those contents to the main directory!
+                                <ul>
+                                    <li><img src="img/um-zip.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+                            <p><b>Edit any neccessary files and restart the server. Your bot should successfully come online.</b></p>
+                            <h4>Alternatively</h4>
+                            <p>You can use FTP to upload your bot to the server. You can find the FTP information in the "Settings" tab.
+                                <ul>
+                                    <li><img src="img/um-ftp.png" class="img-fluid" style="border:2px solid black;" alt=""></li>
+                                </ul>
+                            </p>
+					</section><!--//section-->
+					
+					
+			    </article><!--//docs-article-->
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				        <small class="copyright">&copy; 2022 RexHosts.</small>
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+       
+    <!-- Javascript -->          
+    <script src="../assets/plugins/popper.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="../assets/plugins/smoothscroll.min.js"></script>
+    <script src="../https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="../assets/js/highlight-custom.js"></script> 
+    <script src="../assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="../assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="../assets/js/docs.js"></script> 
+
+</body>
+</html> 
+
