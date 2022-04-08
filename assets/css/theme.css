@@ -10694,3 +10694,11 @@ a.text-link:hover {
         padding-top: 0.5rem;
     }
 }
+
+.quote-docs {
+    background-color: #ebebeb;
+    padding: 30px;
+    font-style: italic;
+    border-radius: 10px;
+    font-size: 14px;
+}
